@@ -1,0 +1,106 @@
+:root {
+  /* set variation axis values */
+  --mono: "MONO" 0; /* Monospace: Sans (natural-width) or Mono (fixed-width) */
+  --casl: "CASL" 0; /* Casual: Linear to Casual */
+  --wght: "wght" 600; /* Weight: Light to ExtraBlack; usually set with `font-weight` */
+  --slnt: "slnt" 0; /* Slant: 0 to -15 degrees, auto cursive at -14 */
+  --crsv: "CRSV" 0.5; /* Cursive: always roman (0), auto substitution (.5), or always cursive (1) */
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+}
+
+* {
+  font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--crsv);
+}
+
+@font-face {
+  font-family: "Recursive";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/recursive/v26/8vJN7wMr0mhh-RQChyHEH06TlXhq_gukbYrFMk1QuAIcyEwG_X-dpEfaE5YaERmK-CImKsvxvU-MXGX2fSqasNfUvz2xbXfn1uEQadCCk317tQtBCYCK6v8.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+* {
+  font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--crsv);
+}
+
+body {
+  font-family: Recursive, sans-serif;
+}
+
+h1 {
+  font-size: var(--s3);
+}
+
+h2 {
+  font-size: var(--s2);
+}
+
+h3 {
+  font-size: var(--s3);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  --casl: "CASL" 1;
+  --wght: "wght" 600;
+}
+
+.mono {
+  --mono: "MONO" 1;
+  --wght: "wght" 400;
+}
+
+p,
+ul,
+ol,
+dd {
+  line-height: var(--s1);
+  margin: var(--s1);
+  max-width: 66ch;
+}
+
+.header-banner h1,
+.header-banner h2 {
+  --mono: "MONO" 1;
+  --casl: "CASL" 0;
+  --wght: "wght" 800;
+}
+
+.header-banner {
+  height: 4em;
+  padding: var(--s-1);
+  background-color: #ddd;
+}
+.header-banner h1, .header-banner h2 {
+  --mono: "MONO" 1;
+  --casl: "CASL" 0;
+  --wght: 800;
+}
+.header-banner > div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: var(--s-1);
+}
+.header-banner h2 {
+  writing-mode: vertical-rl;
+  height: 4em;
+  line-height: 0.8;
+  margin: 0;
+}
+.header-banner h1 {
+  margin: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */
