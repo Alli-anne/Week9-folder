@@ -44,6 +44,8 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
   font-variation-settings: "wght" 400, "MONO" 0;
   font-weight: 400;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .tips {
